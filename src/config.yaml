@@ -1,0 +1,25 @@
+file_path: './data/regression_bonus_practice_data.csv'
+target_column: final_test
+val_test_size: 0.2
+val_size: 0.5
+param_grid:
+  regressor__alpha: [0.1, 1, 10, 100, 1000]
+  regressor__fit_intercept: [True, False]
+cv: 5
+scoring: r2
+numerical_features:
+  - n_male
+  - n_female
+  - hours_per_week
+  - attendance_rate
+nominal_features:
+  - direct_admission
+  - CCA
+  - learning_style
+  - tuition
+  - gender
+  - bag_color
+ordinal_features:
+  - flat_type
+passthrough_features:
+  - age
