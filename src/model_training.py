@@ -216,3 +216,4 @@ class ModelTraining:
             logging.info(f"{metric_name}: {metric_value}")
         return metrics
 
+#### END OF SCRIPT ####

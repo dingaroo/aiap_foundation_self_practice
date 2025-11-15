@@ -1,3 +1,5 @@
+#!/home/dingaroo/anaconda3/envs/aiap21/bin/python3
+
 # Import Standard Python Library
 import logging
 
