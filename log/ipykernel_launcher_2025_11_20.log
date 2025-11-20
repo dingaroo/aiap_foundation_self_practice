@@ -1,0 +1,32 @@
+2025-11-20 16:42:46 - ipykernel_launcher - INFO - Started EDA.
+2025-11-20 16:42:46 - ipykernel_launcher - INFO - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-20 16:42:46 - ipykernel_launcher - INFO - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-20 16:42:46 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-20 16:42:48 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
+2025-11-20 16:43:56 - ipykernel_launcher - INFO - Listing non-numerical columns statistics.
+2025-11-20 16:44:00 - ipykernel_launcher - INFO - Starting the data cleaning phase.
+2025-11-20 16:44:07 - ipykernel_launcher - INFO - Converting to uppercase all values in CCA column.
+2025-11-20 16:44:07 - ipykernel_launcher - INFO - Filling all blank values in CCA to NONE.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Started EDA.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-20 16:52:43 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Listing non-numerical columns statistics.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Starting the data cleaning phase.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Converting to uppercase all values in CCA column.
+2025-11-20 16:52:43 - ipykernel_launcher - INFO - Filling all blank values in CCA to NONE.
+2025-11-20 16:54:20 - ipykernel_launcher - INFO - Converted sleep_time and wake_time columns to datetime formats.
+2025-11-20 16:54:20 - ipykernel_launcher - INFO - Created sleep_duration feature in minutes.
+2025-11-20 16:55:07 - ipykernel_launcher - INFO - Standardized tuition column to 2 values.
+2025-11-20 16:58:10 - ipykernel_launcher - INFO - Filling missing values in final_test column with median values.
+2025-11-20 16:58:14 - ipykernel_launcher - INFO - Filled missing values in attendance_rate column witrh median.
+2025-11-20 16:59:22 - ipykernel_launcher - INFO - Corrected erroneous values in the age column.
+2025-11-20 17:00:02 - ipykernel_launcher - INFO - Saved a clean copy to data folder.
+2025-11-20 17:01:07 - ipykernel_launcher - INFO - Dropped non-essential columns: index, student_id, sleep_time, wake_time, sleep_time_dt, wake_time_dt, sleep_duration
+2025-11-20 17:01:49 - ipykernel_launcher - INFO - Starting univariate analysis.
+2025-11-20 17:02:33 - ipykernel_launcher - INFO - Starting Bivariate Analysis.
+2025-11-20 17:03:08 - ipykernel_launcher - INFO - Performing Correlation Analysis.
+2025-11-20 17:03:59 - ipykernel_launcher - INFO - Dropping sleep_minutes column as it highly correlates with attendance_rate column.
+2025-11-20 17:04:21 - ipykernel_launcher - INFO - Performed Feature/Target separation.
+2025-11-20 17:05:02 - ipykernel_launcher - INFO - Performed train/validation/test split.

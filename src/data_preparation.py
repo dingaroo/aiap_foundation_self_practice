@@ -5,6 +5,7 @@ from typing import Any, Dict
 
 # Related third-party imports
 import pandas as pd
+import numpy as np
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -46,29 +47,15 @@ class DataPreparation:
         pd.DataFrame: The cleaned DataFrame.
         """
         logging.info("Starting data cleaning.")
-        df = df.drop_duplicates(inplace=True)
-        # df["flat_type"] = df["flat_type"].replace("FOUR ROOM", "4 ROOM", inplace=True)
-        # df["lease_commence_date"] = df["lease_commence_date"].abs()
-        # df["storey_range"] = df["storey_range"].apply(self._convert_storey_range)
-        # df = self._fill_missing_names(df, "town_id", "town_name")
-        # df = self._fill_missing_names(df, "flatm_id", "flatm_name")
-        # df = df.drop(columns=["id", "town_id", "flatm_id"])
-        # df["year_month"] = pd.to_datetime(df["month"], format="%Y-%m")
-        # df["year"] = df["year_month"].dt.year
-        # df["month"] = df["year_month"].dt.month
-        # df = df.drop(columns=["year_month"])
-        # df["remaining_lease_months"] = df["remaining_lease"].apply(
-        #     self._extract_lease_info
-        # )
-        # df = df.drop(columns=["remaining_lease", "block", "street_name"])
+        df = df.drop_duplicates()
+        # print(df.columns)
         
-
         # # Converting all values to uppercase
         # df['CCA'] = df['CCA'].str.upper()
 
         # # Filling the missing values with the 'NONE' category
         # df['CCA'] = df['CCA'].fillna('NONE')
-        df = self._clean_CCA(df, 'CCA')
+        df = df._clean_CCA(df, 'CCA')
 
         
         # Convert the 2 string columns to datetime objects
@@ -146,9 +133,9 @@ class DataPreparation:
         )
         return preprocessor
 
-
+    
     @staticmethod
-    def _clean_CCA(dataset: pd.DataFrame, col: str) -> pd.DataFrame:
+    def _clean_CCA(self, dataset: pd.DataFrame, col: str) -> pd.DataFrame:
         """
         Cleans up "CCA" column in the DataFrame by converting all values to uppercase 
         and filling missing values with "NONE".
@@ -159,6 +146,9 @@ class DataPreparation:
         Returns:
             pd.DataFrame: Cleaned DataFrame.
         """
+        
+        print(type(dataset))
+        
         # Converting all values to uppercase
         dataset[col] = dataset[col].str.upper()
 
@@ -166,8 +156,6 @@ class DataPreparation:
         dataset[col] = dataset[col].fillna('NONE')
         
         return dataset
-        
-    
     # @staticmethod
     # def _calculate_sleep_time(df: pd.DataFrame) -> pd.DataFrame:
     #     """

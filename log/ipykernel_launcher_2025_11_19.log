@@ -1,0 +1,5 @@
+2025-11-19 21:15:41 - ipykernel_launcher - INFO - Started EDA.
+2025-11-19 21:24:38 - ipykernel_launcher - INFO - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-19 21:24:38 - ipykernel_launcher - INFO - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-19 21:29:09 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-19 21:31:37 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
