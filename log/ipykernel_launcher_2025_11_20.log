@@ -30,3 +30,16 @@
 2025-11-20 17:03:59 - ipykernel_launcher - INFO - Dropping sleep_minutes column as it highly correlates with attendance_rate column.
 2025-11-20 17:04:21 - ipykernel_launcher - INFO - Performed Feature/Target separation.
 2025-11-20 17:05:02 - ipykernel_launcher - INFO - Performed train/validation/test split.
+2025-11-20 23:56:24 - ipykernel_launcher - INFO - Training set shape: (12720, 13) by (12720,)
+2025-11-20 23:56:24 - ipykernel_launcher - INFO - Validation set shape: (12720, 13) by (1590,)
+2025-11-20 23:56:24 - ipykernel_launcher - INFO - Test set shape: (1590, 13) by (1590,)
+2025-11-20 23:57:58 - ipykernel_launcher - INFO - Preparing numerical_transformer, standardizing numerical features: n_male, n_female, hours_per_week, attendance_rate.
+2025-11-20 23:59:44 - ipykernel_launcher - INFO - Preparing nominal_transformer, performing one-hot encodinf on nominal features: direct_admission, CCA, learning_style, tuition, gender, bag_color.
+2025-11-21 00:00:42 - ipykernel_launcher - INFO - Preparing nominal_transformer, performing one-hot encodinf on nominal features: direct_admission, CCA, learning_style, tuition, gender, bag_color.
+2025-11-21 00:00:42 - ipykernel_launcher - INFO - Preparing passthrough, not performing any operations on the age column.
+2025-11-21 00:02:17 - ipykernel_launcher - INFO - Preparing ColumnTransformer - preprocessor with the numerical, nominal and passthrough transformers.
+2025-11-21 00:03:01 - ipykernel_launcher - INFO - Building machine learning pipeline.
+2025-11-21 00:03:56 - ipykernel_launcher - INFO - Building a Linear Regression Model with the preprocessor ColumnTransformer object.
+2025-11-21 00:10:15 - ipykernel_launcher - INFO - Fitting the training dataset to the Linear Regression model - lr_pipeline.
+2025-11-21 00:10:16 - ipykernel_launcher - INFO - Predicting on the validation set - y_val_pred.
+2025-11-21 00:14:00 - ipykernel_launcher - INFO - Implementing Multivariate Linear Regression.

@@ -1,0 +1,52 @@
+2025-11-21 16:54:23 - ipykernel_launcher - INFO - Loaded libraries.
+2025-11-21 16:55:11 - ipykernel_launcher - INFO - Starting EDA.
+2025-11-21 16:55:33 - ipykernel_launcher - INFO - Loaded libraries.
+2025-11-21 16:55:33 - ipykernel_launcher - INFO - Starting EDA.
+2025-11-21 16:56:13 - ipykernel_launcher - INFO - Loaded libraries.
+2025-11-21 16:56:22 - ipykernel_launcher - INFO - Starting EDA.
+2025-11-21 16:56:55 - ipykernel_launcher - INFO - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 16:56:55 - ipykernel_launcher - INFO - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 16:57:13 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-21 16:57:59 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
+2025-11-21 17:04:47 - ipykernel_launcher - INFO - Loaded libraries.
+2025-11-21 17:04:47 - ipykernel_launcher - INFO - Starting EDA.
+2025-11-21 17:04:47 - ipykernel_launcher - INFO - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 17:04:47 - ipykernel_launcher - INFO - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 17:04:47 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-21 17:04:47 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
+2025-11-21 17:04:52 - ipykernel_launcher - INFO - Listing non-numerical columns statistics.
+2025-11-21 17:05:02 - ipykernel_launcher - INFO - Starting the data cleaning phase.
+2025-11-21 17:05:13 - ipykernel_launcher - DEBUG - Starting the data cleaning phase.
+2025-11-21 17:30:30 - ipykernel_launcher - DEBUG - Loaded libraries.
+2025-11-21 17:30:30 - ipykernel_launcher - DEBUG - Starting EDA.
+2025-11-21 17:30:30 - ipykernel_launcher - DEBUG - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 17:30:30 - ipykernel_launcher - DEBUG - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 17:30:30 - ipykernel_launcher - DEBUG - Found missing values 5,102.
+2025-11-21 18:47:36 - ipykernel_launcher - DEBUG - Loaded libraries.
+2025-11-21 18:47:36 - ipykernel_launcher - DEBUG - Starting EDA.
+2025-11-21 18:47:36 - ipykernel_launcher - DEBUG - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 18:47:36 - ipykernel_launcher - DEBUG - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 18:48:34 - ipykernel_launcher - DEBUG - Loaded libraries.
+2025-11-21 18:48:34 - ipykernel_launcher - DEBUG - Starting EDA.
+2025-11-21 18:48:34 - ipykernel_launcher - DEBUG - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 18:48:34 - ipykernel_launcher - DEBUG - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 18:49:24 - ipykernel_launcher - DEBUG - Columns with missing values: ['CCA', 'final_test', 'attendance_rate']
+2025-11-21 18:49:24 - ipykernel_launcher - DEBUG - CCA                       :  3,829 missing (24.08%)
+2025-11-21 18:49:24 - ipykernel_launcher - DEBUG - final_test                :    495 missing ( 3.11%)
+2025-11-21 18:49:24 - ipykernel_launcher - DEBUG - attendance_rate           :    778 missing ( 4.89%)
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Loaded libraries.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Starting EDA.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Loading dataset from ./data/regression_bonus_practice_data.csv.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Loaded dataset of 15,900 rows by 18 columns.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Columns with missing values: ['CCA', 'final_test', 'attendance_rate']
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - CCA                       :  3,829 missing (24.08%)
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - final_test                :    495 missing ( 3.11%)
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - attendance_rate           :    778 missing ( 4.89%)
+2025-11-21 18:51:10 - ipykernel_launcher - INFO - There are no duplicates in the dataset.
+2025-11-21 18:51:10 - ipykernel_launcher - INFO - Listing non-numerical columns statistics.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Starting the data cleaning phase.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Converting to uppercase all values in CCA column.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Filling all blank values in CCA to NONE.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Converted sleep_time and wake_time columns to datetime formats.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Created sleep_duration feature in minutes.
+2025-11-21 18:51:10 - ipykernel_launcher - DEBUG - Standardized tuition column to 2 values.
