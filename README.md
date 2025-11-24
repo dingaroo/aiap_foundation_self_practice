@@ -31,6 +31,33 @@ A dataset was shared with us and the dataset list and attributes are as follows:
 
 ## Prerequisites and Installation
 
+The various Python and libraries used in this project are as follows:
+
+| Module/Name | Version |
+| ----------- | ------- |
+| Python      | 3.11.13 |
+| Pandas      | 2.3.1   |
+| Numpy       | 2.3.2   |
+| Matplotlib  | 3.10.3  |
+| Seaborn     | 0.13.2  |
+
+There is a custom module called app_logger which I have included in the project. It just needs to be placed at the root directory of the project. When it executes, daily log files will be created in the `log` directory.
+
+```raw
+.
+├── app_logging
+│   └── app_logging.py
+├── data
+│   └── regression_bonus_practice_data.csv
+├── eda.ipynb
+├── main.py
+├── README.md
+└── src
+    ├── config.yaml
+    ├── data_preparation.py
+    └── model_training.py
+ ```
+
 List any prerequisites needed to run the project, such as Python version, libraries, and other dependencies. Include instructions on how to set up the environment and install the necessary packages. This is where your 'requirements.txt' file will come in handy.
 
 

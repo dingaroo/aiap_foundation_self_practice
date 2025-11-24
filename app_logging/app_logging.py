@@ -18,6 +18,7 @@ class Logger:
     LOG_DIR = "log"
     CONSOLE_LEVEL = logging.INFO
     FILE_LEVEL = logging.DEBUG
+
     
     @staticmethod
     def initialize():

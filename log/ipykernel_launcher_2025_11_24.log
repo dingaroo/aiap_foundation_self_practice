@@ -34,3 +34,4 @@
 2025-11-24 14:29:22 - ipykernel_launcher - DEBUG - Preparing passthrough feature: ['age'].
 2025-11-24 14:29:22 - ipykernel_launcher - DEBUG - Preparing ColumnTransformer - preprocessor with the numerical, nominal and passthrough transformers.
 2025-11-24 14:29:25 - ipykernel_launcher - DEBUG - Building a Linear Regression Model with the preprocessor ColumnTransformer object.
+2025-11-24 18:39:29 - ipykernel_launcher - DEBUG - Loaded libraries.
