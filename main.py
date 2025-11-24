@@ -1,7 +1,7 @@
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 
 # Import Standard Python Library
-import logging
+# import logging
 
 # Third-party imports
 import pandas as pd
@@ -14,19 +14,35 @@ from app_logging.app_logging import Logger
 from src.data_preparation import DataPreparation
 from src.model_training import ModelTraining
 
-logging.basicConfig(level = logging.INFO)
+# Logging library
+from app_logging.app_logging import Logger
+
+# logging.basicConfig(level = logging.INFO)
+
+# Environmental variables
+config_path = './src/config.yaml'
 
 
 @ignore_warnings(category = "Warning") # type: ignore
 def main():
-    # Configuration file path
-    config_path = "./src/config.yaml"
-    
-    with open(config_path, "r") as file:
-            config = yaml.safe_load(file)
+    # Loading configuration file
+    try:
+        with open(config_path, 'r') as file:
+                config = yaml.safe_load(file)
+    except FileNotFoundError:
+                Logger.error('Configuration file not found.')
+                raise FileNotFoundError('Configuratrion file not found.')
     
     # Load csv file into a DataFrame
-    df = pd.read_csv(config["file_path"])
+    try:
+        df = pd.read_csv(config["file_path"])
+    except FileNotFoundError:
+        Logger.error('Data file not found.')
+        raise FileNotFoundError('Data file not found.')
+    except pd.errors.ParserError:
+        Logger.error(f"\n❌ ERROR: The file at '{config["file_path"]}' is not a valid CSV.")
+        print(f"\n❌ ERROR: The file at '{config["file_path"]}' is not a valid CSV.")
+        print("Please check that the file is a standard, comma-separated text file.")
     
     # Initialize and run data preparation
     data_prep = DataPreparation(config)
