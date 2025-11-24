@@ -1,7 +1,6 @@
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 
 # Import Standard Python Library
-# import logging
 
 # Third-party imports
 import pandas as pd

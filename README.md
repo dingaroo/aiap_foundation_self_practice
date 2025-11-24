@@ -40,6 +40,7 @@ The various Python and libraries used in this project are as follows:
 | Numpy       | 2.3.2   |
 | Matplotlib  | 3.10.3  |
 | Seaborn     | 0.13.2  |
+| Conda       | 25.7.0  |
 
 There is a custom module called app_logger which I have included in the project. It just needs to be placed at the root directory of the project. When it executes, daily log files will be created in the `log` directory.
 
@@ -58,12 +59,105 @@ There is a custom module called app_logger which I have included in the project.
     └── model_training.py
  ```
 
-List any prerequisites needed to run the project, such as Python version, libraries, and other dependencies. Include instructions on how to set up the environment and install the necessary packages. This is where your 'requirements.txt' file will come in handy.
-
-
-
 
 ## Instructions for Executing the Pipeline
+
+Unpack the files and load it into a directory of your choice. To run the pipeline, several checks need to be performed.
+
+1. Verify Python path
+
+    - Open a Terminal window either on your machine, Follow the steps below.
+
+```raw
+(aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % which python3
+/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
+(aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % 
+```
+
+    - Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
+
+```raw
+#!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
+
+# Import Standard Python Library
+
+# Third-party imports
+import pandas as pd
+import numpy as np
+import yaml
+from sklearn.utils._testing import ignore_warnings
+from app_logging.app_logging import Logger
+```
+
+    - After changing to the right path to the Python executable, don't forget to save it, if necessary.
+
+2. Create a new Conda environment, and making sure that the Python version to be used is **3.11**.
+
+    - From the terminal window, type the following commands to create new environment and then enter the environment.
+
+```raw
+(base) admin@admins-MacBook-Pro ~ % conda create -n project python=3.11
+2 channel Terms of Service accepted
+Retrieving notices: done
+Channels:
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+...
+```
+
+    - As Conda is creating the environment, it will pull several modules for starting a new environment.
+
+```raw
+...
+  tk                 pkgs/main/osx-arm64::tk-8.6.15-hcd8a7d5_0 
+  tzdata             pkgs/main/noarch::tzdata-2025b-h04d1e81_0 
+  wheel              pkgs/main/osx-arm64::wheel-0.45.1-py311hca03da5_0 
+  xz                 pkgs/main/osx-arm64::xz-5.6.4-h80987f9_1 
+  zlib               pkgs/main/osx-arm64::zlib-1.3.1-h5f15de7_0 
+
+
+Proceed ([y]/n)? 
+```
+
+    - To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
+
+```raw
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate project
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) admin@admins-MacBook-Pro ~ % 
+```
+
+    - To activate the environment, in this case `project`, enter the following command at the terminal window.
+
+```raw
+(base) admin@admins-MacBook-Pro ~ % conda activate project
+(project) admin@admins-MacBook-Pro ~ % 
+```
+
+    * **Note** the change from `base` to `project` 
+
+3. Install required Python modules.
+
+```raw
+
+```
+
+4. Execute from the terminal.
+
+   - Using the terminal, navigate to the root directory. 
+
 
 Provide step-by-step instructions for running your end-to-end machine learning pipeline. Include details on how to execute the 'main.py' script and any other relevant scripts. Additionally, explain how to modify any parameters in the 'config.yaml' file if needed.
 
