@@ -72,11 +72,11 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % which python3
 /opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % 
-```raw
+```
 
     - Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
 
-```raw
+```python
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 
 # Import Standard Python Library
@@ -87,7 +87,7 @@ import numpy as np
 import yaml
 from sklearn.utils._testing import ignore_warnings
 from app_logging.app_logging import Logger
-```raw
+```
 
     - After changing to the right path to the Python executable, don't forget to save it, if necessary.
 
@@ -105,7 +105,7 @@ Platform: osx-arm64
 Collecting package metadata (repodata.json): done
 Solving environment: done
 ...
-```raw
+```
 
     - As Conda is creating the environment, it will pull several modules for starting a new environment.
 
@@ -119,7 +119,7 @@ Solving environment: done
 
 
 Proceed ([y]/n)? 
-```raw
+```
 
     - To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
 
@@ -137,14 +137,14 @@ Executing transaction: done
 #     $ conda deactivate
 
 (base) admin@admins-MacBook-Pro ~ % 
-```raw
+```
 
     - To activate the environment, in this case `project`, enter the following command at the terminal window.
 
 ```raw
 (base) admin@admins-MacBook-Pro ~ % conda activate project
 (project) admin@admins-MacBook-Pro ~ % 
-```raw
+```
 
     * **Note** the change from `base` to `project` 
 
@@ -152,7 +152,7 @@ Executing transaction: done
 
 ```raw
 
-```raw
+```
 
 4. Execute from the terminal.
 
