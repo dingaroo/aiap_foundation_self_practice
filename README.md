@@ -41,6 +41,7 @@ The various Python and libraries used in this project are as follows:
 | Matplotlib  | 3.10.3  |
 | Seaborn     | 0.13.2  |
 | Conda       | 25.7.0  |
+| PyYAML      | 6.0.3   |
 
 There is a custom module called app_logger which I have included in the project. It just needs to be placed at the root directory of the project. When it executes, daily log files will be created in the `log` directory.
 
@@ -137,7 +138,7 @@ Executing transaction: done
 #     $ conda deactivate
 
 (base) admin@admins-MacBook-Pro ~ % 
-```
+'''
 
     - To activate the environment, in this case `project`, enter the following command at the terminal window.
 
@@ -150,13 +151,40 @@ Executing transaction: done
 
 3. Install required Python modules.
 
-```raw
+    - To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to.
+    - Ensure that the file `requirements.txt` is in the file.
 
+```raw
+(project) admin@admins-MacBook-Pro project % ls -l
+total 200
+-rw-r--r--@ 1 admin  staff  73853 25 Nov 12:59 eda.ipynb
+-rwxr-xr-x@ 1 admin  staff   2925 25 Nov 12:59 main.py
+-rw-r--r--@ 1 admin  staff   7891 25 Nov 12:59 README.md
+-rw-r--r--@ 1 admin  staff    134 25 Nov 12:59 requirements.txt
+-rw-r--r--@ 1 admin  staff   1738 25 Nov 12:59 temp.py
+-rw-r--r--@ 1 admin  staff      0 25 Nov 12:59 temp2.ipynb
+-rw-r--r--@ 1 admin  staff    573 25 Nov 12:59 Todo.md
+(project) admin@admins-MacBook-Pro project % 
+
+```
+
+    - Install the required libraries/modules.
+
+```raw
+(project) admin@admins-MacBook-Pro project % pip install -r requirements.txt
+...
+Installing collected packages: pytz, tzdata, traitlets, threadpoolctl, six, PyYAML, pyparsing, pillow, packaging, numpy, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, matplotlib-inline, contourpy, scikit-learn, pandas, matplotlib, seaborn
+Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 joblib-1.5.2 kiwisolver-1.4.9 matplotlib-3.10.3 matplotlib-inline-0.1.7 numpy-2.3.2 packaging-25.0 pandas-2.3.1 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.7.1 scipy-1.16.1 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 traitlets-5.14.3 tzdata-2025.2
+(project) admin@admins-MacBook-Pro project %
 ```
 
 4. Execute from the terminal.
 
-   - Using the terminal, navigate to the root directory. 
+   - Using the terminal, navigate to the project directory. 
+
+```raw
+abc
+raw```
 
 
 Provide step-by-step instructions for running your end-to-end machine learning pipeline. Include details on how to execute the 'main.py' script and any other relevant scripts. Additionally, explain how to modify any parameters in the 'config.yaml' file if needed.
