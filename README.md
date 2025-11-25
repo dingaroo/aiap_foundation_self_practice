@@ -67,9 +67,9 @@ There is a custom module called app_logger which I have included in the project.
 
 Unpack the files and load it into a directory of your choice. To run the pipeline, several checks need to be performed.
 
-1. Verify Python path
+### Verify Python path
 
-    * Open a Terminal window either on your machine, Follow the steps below.
+1. Open a Terminal window either on your machine, Follow the steps below.
 
 
 ````raw
@@ -81,7 +81,7 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 ````
 
 
-    * Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
+2. Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
 
 
 ````python
@@ -100,11 +100,14 @@ from app_logging.app_logging import Logger
 ````
 
 
-    * After changing to the right path to the Python executable, don't forget to save it, if necessary.
+3. After changing to the right path to the Python executable, don't forget to save it, if necessary.
 
-2. Create a new Conda environment, and making sure that the Python version to be used is **3.11**.
 
-    * From the terminal window, type the following commands to create new environment and then enter the environment.
+### Create a new Conda environment
+
+* ***Make sure that the Python version is **3.11***.
+
+4. From the terminal window, type the following commands to create new environment and then enter the environment.
 
 
 ````raw
@@ -122,7 +125,7 @@ Solving environment: done
 ````
 
 
-    * As Conda is creating the environment, it will pull several modules for starting a new environment.
+5. As Conda is creating the environment, it will pull several modules for starting a new environment.
 
 
 ````raw
@@ -140,7 +143,7 @@ Proceed ([y]/n)?
 ````
 
 
-    * To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
+6. To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
 
 
 ````raw
@@ -162,7 +165,7 @@ Executing transaction: done
 ````
 
 
-    - To activate the environment, in this case `project`, enter the following command at the terminal window.
+7. To activate the environment, in this case `project`, enter the following command at the terminal window.
 
 
 ````raw
@@ -173,12 +176,12 @@ Executing transaction: done
 ````
 
 
-    * **Note** the change from `base` to `project` 
+* ***Note*** the change from `base` to `project` 
 
-3. Install required Python modules.
 
-    * To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to.
-    * Ensure that the file `requirements.txt` is in the file.
+### Install required Python modules.
+
+1. To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to. Ensure that the file `requirements.txt` is in the file.
 
 
 ````raw
@@ -197,7 +200,7 @@ total 200
 ````
 
 
-    * Install the required libraries/modules.
+2. Install the required libraries/modules.
 
 
 ````raw
@@ -212,7 +215,7 @@ Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60
 (project) admin@admins-MacBook-Pro project %
 ````
 
-4. Execute from the terminal.
+3. Execute from the terminal.
 
    - Using the terminal, navigate to the project directory. 
 
