@@ -67,7 +67,7 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 
 1. Verify Python path
 
-    - Open a Terminal window either on your machine, Follow the steps below.
+    * Open a Terminal window either on your machine, Follow the steps below.
 
 ````raw
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % which python3
@@ -75,7 +75,7 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % 
 ````
 
-    - Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
+    * Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
 
 ````python
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
@@ -90,11 +90,11 @@ from sklearn.utils._testing import ignore_warnings
 from app_logging.app_logging import Logger
 ````
 
-    - After changing to the right path to the Python executable, don't forget to save it, if necessary.
+    * After changing to the right path to the Python executable, don't forget to save it, if necessary.
 
 2. Create a new Conda environment, and making sure that the Python version to be used is **3.11**.
 
-    - From the terminal window, type the following commands to create new environment and then enter the environment.
+    * From the terminal window, type the following commands to create new environment and then enter the environment.
 
 ````raw
 (base) admin@admins-MacBook-Pro ~ % conda create -n project python=3.11
@@ -108,7 +108,7 @@ Solving environment: done
 ...
 ````
 
-    - As Conda is creating the environment, it will pull several modules for starting a new environment.
+    * As Conda is creating the environment, it will pull several modules for starting a new environment.
 
 ````raw
 ...
@@ -122,7 +122,7 @@ Solving environment: done
 Proceed ([y]/n)? 
 ````
 
-    - To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
+    * To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
 
 ````raw
 Preparing transaction: done
@@ -151,8 +151,8 @@ Executing transaction: done
 
 3. Install required Python modules.
 
-    - To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to.
-    - Ensure that the file `requirements.txt` is in the file.
+    * To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to.
+    * Ensure that the file `requirements.txt` is in the file.
 
 ````raw
 (project) admin@admins-MacBook-Pro project % ls -l
@@ -168,11 +168,13 @@ total 200
 
 ````
 
-    - Install the required libraries/modules.
+    * Install the required libraries/modules.
 
 ````raw
 (project) admin@admins-MacBook-Pro project % pip install -r requirements.txt
+
 ...
+
 Installing collected packages: pytz, tzdata, traitlets, threadpoolctl, six, PyYAML, pyparsing, pillow, packaging, numpy, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, matplotlib-inline, contourpy, scikit-learn, pandas, matplotlib, seaborn
 Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 joblib-1.5.2 kiwisolver-1.4.9 matplotlib-3.10.3 matplotlib-inline-0.1.7 numpy-2.3.2 packaging-25.0 pandas-2.3.1 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.7.1 scipy-1.16.1 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 traitlets-5.14.3 tzdata-2025.2
 (project) admin@admins-MacBook-Pro project %
