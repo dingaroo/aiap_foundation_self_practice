@@ -182,9 +182,9 @@ Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60
 
    - Using the terminal, navigate to the project directory. 
 
-```raw
+````raw
 abc
-raw```
+````
 
 
 Provide step-by-step instructions for running your end-to-end machine learning pipeline. Include details on how to execute the 'main.py' script and any other relevant scripts. Additionally, explain how to modify any parameters in the 'config.yaml' file if needed.
