@@ -45,7 +45,7 @@ The various Python and libraries used in this project are as follows:
 
 There is a custom module called app_logger which I have included in the project. It just needs to be placed at the root directory of the project. When it executes, daily log files will be created in the `log` directory.
 
-```raw
+````raw
 .
 ├── app_logging
 │   └── app_logging.py
@@ -58,7 +58,7 @@ There is a custom module called app_logger which I have included in the project.
     ├── config.yaml
     ├── data_preparation.py
     └── model_training.py
- ```
+ ````
 
 
 ## Instructions for Executing the Pipeline
