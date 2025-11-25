@@ -48,17 +48,16 @@ There is a custom module called app_logger which I have included in the project.
 ````raw
 
 .
-├── app_logging
-│   └── app_logging.py
 ├── data
 │   └── regression_bonus_practice_data.csv
 ├── eda.ipynb
 ├── main.py
 ├── README.md
+├── requirements.txt
 └── src
-    ├── config.yaml
-    ├── data_preparation.py
-    └── model_training.py
+    ├── config.yaml
+    ├── data_preparation.py
+    └── model_training.py
 
  ````
 
@@ -215,21 +214,70 @@ Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60
 (project) admin@admins-MacBook-Pro project %
 ````
 
-3. Execute from the terminal.
+3. Using the terminal, navigate to the project directory. Then run the following program.
 
-   - Using the terminal, navigate to the project directory. 
 
 ````raw
-abc
+
+(project) admin@admins-MacBook-Pro project % python3 main.py
+
 ````
 
 
-Provide step-by-step instructions for running your end-to-end machine learning pipeline. Include details on how to execute the 'main.py' script and any other relevant scripts. Additionally, explain how to modify any parameters in the 'config.yaml' file if needed.
+### Change of database file name or location
+
+1. The file `config.yaml` stores all the configuration settings for the pipeline. It contains the following lines.
+
+
+````yaml
+
+file_path: './data/regression_bonus_practice_data.csv'
+target_column: final_test
+val_test_size: 0.2
+val_size: 0.5
+param_grid:
+  regressor__alpha: [0.1, 1, 10, 100, 1000]
+  regressor__fit_intercept: [True, False]
+cv: 5
+scoring: r2
+numerical_features:
+  - n_male
+  - n_female
+  - hours_per_week
+  - attendance_rate
+nominal_features:
+  - direct_admission
+  - CCA
+  - learning_style
+  - tuition
+  - gender
+  - bag_color
+ordinal_features:
+  - flat_type
+passthrough_features:
+  - age
+
+````
+
+
+2. The first line contains the configuration settings for the name and file path of the database. Change that to reflect any new dataset that you would like to use. 
+
+
+
+### Change of name of machine learning model's target
+
+1, The second line specifies the column or feature to be used as the target for the model, i.e., the final score of the students' examination. It could be for other subjecrts too. However, if you would like to change the name of the column in the configuration file, change at line 2.
+
 
 
 ## Description of Logical Steps/Flow of the Pipeline
 
+
+![Pipeline Process Flow](./images/pipeline_process_flow_chart.png)
+
 Describe the logical steps and flow of your machine learning pipeline. Include a brief explanation of each major step, such as data cleaning, preprocessing, model training, evaluation, and prediction. If useful, include flow charts or other visual aids to help illustrate the process.
+
+
 
 
 ## Overview of Key Findings from EDA
