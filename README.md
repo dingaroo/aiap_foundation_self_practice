@@ -69,13 +69,16 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 
     * Open a Terminal window either on your machine, Follow the steps below.
 
+
 ````raw
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % which python3
 /opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % 
 ````
 
+
     * Open the file `main.py` in a text editor. Verify that the first line in the file is the same as the above path. If not, replace the path starting from `#!`.
+
 
 ````python
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
@@ -90,11 +93,13 @@ from sklearn.utils._testing import ignore_warnings
 from app_logging.app_logging import Logger
 ````
 
+
     * After changing to the right path to the Python executable, don't forget to save it, if necessary.
 
 2. Create a new Conda environment, and making sure that the Python version to be used is **3.11**.
 
     * From the terminal window, type the following commands to create new environment and then enter the environment.
+
 
 ````raw
 (base) admin@admins-MacBook-Pro ~ % conda create -n project python=3.11
@@ -108,7 +113,9 @@ Solving environment: done
 ...
 ````
 
+
     * As Conda is creating the environment, it will pull several modules for starting a new environment.
+
 
 ````raw
 ...
@@ -122,7 +129,9 @@ Solving environment: done
 Proceed ([y]/n)? 
 ````
 
+
     * To proceed, accede to the request and enter `y` followed by **ENTER** key. After pulling and installing the initial required modules, you will be presented with the output below.
+
 
 ````raw
 Preparing transaction: done
