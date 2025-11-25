@@ -46,6 +46,7 @@ The various Python and libraries used in this project are as follows:
 There is a custom module called app_logger which I have included in the project. It just needs to be placed at the root directory of the project. When it executes, daily log files will be created in the `log` directory.
 
 ````raw
+
 .
 ├── app_logging
 │   └── app_logging.py
@@ -58,6 +59,7 @@ There is a custom module called app_logger which I have included in the project.
     ├── config.yaml
     ├── data_preparation.py
     └── model_training.py
+
  ````
 
 
@@ -71,9 +73,11 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 
 
 ````raw
+
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % which python3
 /opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 (aiap21_tech_asst) admin@admins-MacBook-Pro aiap_foundation_self_practice % 
+
 ````
 
 
@@ -81,6 +85,7 @@ Unpack the files and load it into a directory of your choice. To run the pipelin
 
 
 ````python
+
 #!/opt/miniconda3/envs/aiap21_tech_asst/bin/python3
 
 # Import Standard Python Library
@@ -91,6 +96,7 @@ import numpy as np
 import yaml
 from sklearn.utils._testing import ignore_warnings
 from app_logging.app_logging import Logger
+
 ````
 
 
@@ -102,6 +108,7 @@ from app_logging.app_logging import Logger
 
 
 ````raw
+
 (base) admin@admins-MacBook-Pro ~ % conda create -n project python=3.11
 2 channel Terms of Service accepted
 Retrieving notices: done
@@ -111,6 +118,7 @@ Platform: osx-arm64
 Collecting package metadata (repodata.json): done
 Solving environment: done
 ...
+
 ````
 
 
@@ -118,6 +126,7 @@ Solving environment: done
 
 
 ````raw
+
 ...
   tk                 pkgs/main/osx-arm64::tk-8.6.15-hcd8a7d5_0 
   tzdata             pkgs/main/noarch::tzdata-2025b-h04d1e81_0 
@@ -127,6 +136,7 @@ Solving environment: done
 
 
 Proceed ([y]/n)? 
+
 ````
 
 
@@ -134,6 +144,7 @@ Proceed ([y]/n)?
 
 
 ````raw
+
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
@@ -147,14 +158,20 @@ Executing transaction: done
 #     $ conda deactivate
 
 (base) admin@admins-MacBook-Pro ~ % 
+
 ````
+
 
     - To activate the environment, in this case `project`, enter the following command at the terminal window.
 
+
 ````raw
+
 (base) admin@admins-MacBook-Pro ~ % conda activate project
 (project) admin@admins-MacBook-Pro ~ % 
+
 ````
+
 
     * **Note** the change from `base` to `project` 
 
@@ -163,7 +180,9 @@ Executing transaction: done
     * To install the required libraries/modules to run this project, locate the directory that you moved or copied the project files to.
     * Ensure that the file `requirements.txt` is in the file.
 
+
 ````raw
+
 (project) admin@admins-MacBook-Pro project % ls -l
 total 200
 -rw-r--r--@ 1 admin  staff  73853 25 Nov 12:59 eda.ipynb
@@ -177,12 +196,16 @@ total 200
 
 ````
 
+
     * Install the required libraries/modules.
 
+
 ````raw
+
 (project) admin@admins-MacBook-Pro project % pip install -r requirements.txt
 
 ...
+
 
 Installing collected packages: pytz, tzdata, traitlets, threadpoolctl, six, PyYAML, pyparsing, pillow, packaging, numpy, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, matplotlib-inline, contourpy, scikit-learn, pandas, matplotlib, seaborn
 Successfully installed PyYAML-6.0.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 joblib-1.5.2 kiwisolver-1.4.9 matplotlib-3.10.3 matplotlib-inline-0.1.7 numpy-2.3.2 packaging-25.0 pandas-2.3.1 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.7.1 scipy-1.16.1 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 traitlets-5.14.3 tzdata-2025.2
