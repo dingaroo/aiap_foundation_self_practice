@@ -272,8 +272,21 @@ passthrough_features:
 
 ## Description of Logical Steps/Flow of the Pipeline
 
-
+<br>
 ![Pipeline Process Flow](./images/pipeline_process_flow_chart.png)
+<br>
+
+Sequences:
+- Program start
+- Data Ingestion
+- Data Cleaning
+- Univariate Analysis
+- Bivariate Analysis
+- Correlation Analysis
+- Feature Engineering & Selection
+- Build a Pipeline
+- Model Development
+- Model Evaluation
 
 Describe the logical steps and flow of your machine learning pipeline. Include a brief explanation of each major step, such as data cleaning, preprocessing, model training, evaluation, and prediction. If useful, include flow charts or other visual aids to help illustrate the process.
 
@@ -282,15 +295,30 @@ Describe the logical steps and flow of your machine learning pipeline. Include a
 
 ## Overview of Key Findings from EDA
 
+Findings from univariate, bivariate, and multivariate analyses are summarised as follows:
+
+
+
+
 Summarise the key findings from your exploratory data analysis (EDA) conducted in the previous sections. Highlight any important patterns, trends, or insights that influenced the design of your pipeline. Keep the detailed EDA in the Jupyter notebook, and include only a quick summary in the 'README.md'.
 
 
 ## Feature Handling Description
 
+
+
+
 Provide a description of how the features in the dataset are cleaned and processed. Include other relevant information such as any newly engineered features and selected features used in model training. Summarise this information in a table for clarity.
 
 
 ## Explanation of Model Choices
+
+Based on the machine learning tasks identified, I have selected three models to be developed. They are as follows:
+
+a. Multivariatge Linear Regression
+b. Decision Tree Regressor
+c. XGBoost Regressor
+
 
 Explain your choice of models for each machine learning task. Discuss why you selected each model and how it fits the specific requirements of your project.
 
@@ -298,6 +326,8 @@ Explain your choice of models for each machine learning task. Discuss why you se
 ## Evaluation of Models
 
 Evaluate the models you developed, discussing their performance metrics. Explain any metrics used in the evaluation and why they were chosen. This section should provide a clear understanding of how well each model performs.
+
+
 
 ## Considerations for Deployment
 
