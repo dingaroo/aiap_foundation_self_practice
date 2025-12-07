@@ -1,0 +1,207 @@
+======================================================================
+EDA Analysis Session Started: 2025-12-07 22:07:39
+Log file: log/eda_analysis_20251207_220739.log
+======================================================================
+
+Advanced Univariate Statistics:
+                      Count         Mean  Median      Std Dev   Min       Q1  \
+index               15900.0  7949.500000  7949.5  4590.078975   0.0  3974.75   
+number_of_siblings  15900.0     0.886541     1.0     0.751346   0.0     0.00   
+final_test          15405.0    67.165401    68.0    13.977879  32.0    56.00   
+n_male              15900.0    13.880000    14.0     6.552584   0.0    10.00   
+n_female            15900.0     8.906038     8.0     6.663852   0.0     4.00   
+age                 15900.0    15.213459    15.0     1.758941  -5.0    15.00   
+hours_per_week      15900.0    10.312579     9.0     4.461861   0.0     7.00   
+attendance_rate     15122.0    93.270268    95.0     7.984230  40.0    92.00   
+
+                          Q3      Max     IQR  Skewness   Kurtosis  \
+index               11924.25  15899.0  7949.5  0.000000  -1.200000   
+number_of_siblings      1.00      2.0     1.0  0.188977  -1.211288   
+final_test             78.00    100.0    22.0  0.055557  -0.729156   
+n_male                 18.00     31.0     8.0 -0.125808  -0.379961   
+n_female               13.00     31.0     9.0  0.733112  -0.091635   
+age                    16.00     16.0     1.0 -5.160761  28.648912   
+hours_per_week         14.00     20.0     7.0  0.438701  -0.629644   
+attendance_rate        97.00    100.0     5.0 -3.696059  15.675861   
+
+                        Variance    Range        CV  
+index               2.106882e+07  15899.0  0.577405  
+number_of_siblings  5.645210e-01      2.0  0.847503  
+final_test          1.953811e+02     68.0  0.208111  
+n_male              4.293635e+01     31.0  0.472088  
+n_female            4.440692e+01     31.0  0.748240  
+age                 3.093875e+00     21.0  0.115617  
+hours_per_week      1.990820e+01     20.0  0.432662  
+attendance_rate     6.374793e+01     60.0  0.085603  
+
+======================================================================
+NORMALITY TESTS
+======================================================================
+
+index:
+  Shapiro-Wilk: statistic=0.9549, p-value=0.0000
+  Anderson-Darling: statistic=176.7632
+  D'Agostino-Pearson: statistic=13938.3075, p-value=0.0000
+  ✗ index is NOT normally distributed (p < 0.05)
+
+number_of_siblings:
+  Shapiro-Wilk: statistic=0.8040, p-value=0.0000
+  Anderson-Darling: statistic=1271.0805
+  D'Agostino-Pearson: statistic=15610.0539, p-value=0.0000
+  ✗ number_of_siblings is NOT normally distributed (p < 0.05)
+
+final_test:
+  Shapiro-Wilk: statistic=0.9877, p-value=0.0000
+  Anderson-Darling: statistic=44.9348
+  D'Agostino-Pearson: statistic=942.1393, p-value=0.0000
+  ✗ final_test is NOT normally distributed (p < 0.05)
+
+n_male:
+  Shapiro-Wilk: statistic=0.9869, p-value=0.0000
+  Anderson-Darling: statistic=48.7809
+  D'Agostino-Pearson: statistic=189.6158, p-value=0.0000
+  ✗ n_male is NOT normally distributed (p < 0.05)
+
+n_female:
+  Shapiro-Wilk: statistic=0.9413, p-value=0.0000
+  Anderson-Darling: statistic=241.4579
+  D'Agostino-Pearson: statistic=1158.5699, p-value=0.0000
+  ✗ n_female is NOT normally distributed (p < 0.05)
+
+✓ Univariate analysis complete! Distribution plots saved.
+Outliers Detected by Each Method:
+Z-Score               981
+IQR                  1373
+Isolation Forest      733
+LOF                   733
+Elliptic Envelope     733
+dtype: int64
+
+Total samples: 14648
+
+Consensus outliers (≥3 methods): 838
+
+✓ Outlier detection comparison complete!
+
+Top 10 Correlated Pairs (Pearson):
+============================================================
+                  Var1             Var2   Pearson  Spearman   Kendall
+18              n_male         n_female -0.795446 -0.780911 -0.606562
+7   number_of_siblings       final_test -0.363767 -0.369936 -0.283686
+17          final_test  attendance_rate  0.349375  0.168694  0.118264
+14          final_test         n_female -0.171978 -0.161848 -0.111938
+13          final_test           n_male -0.149152 -0.152408 -0.105026
+16          final_test   hours_per_week -0.148254 -0.180432 -0.130791
+27      hours_per_week  attendance_rate  0.143873  0.078774  0.056699
+12  number_of_siblings  attendance_rate -0.122420 -0.071441 -0.057341
+11  number_of_siblings   hours_per_week  0.085327  0.092962  0.073897
+21              n_male  attendance_rate -0.053788 -0.024977 -0.017688
+
+
+Variance Inflation Factor (VIF) Analysis:
+============================================================
+              Feature         VIF
+7     attendance_rate  114.445943
+5                 age   58.019193
+2          final_test   38.980260
+3              n_male   14.749403
+4            n_female    7.741796
+6      hours_per_week    6.788162
+0               index    3.950215
+1  number_of_siblings    2.720508
+
+✓ Correlation and multicollinearity analysis complete!
+Performing PCA...
+Number of components for 95% variance: 7
+Total features: 8
+Reduction ratio: 12.5%
+
+Performing t-SNE (this may take a moment)...
+Performing UMAP...
+
+✓ Dimensionality reduction analysis complete!
+Evaluating clusters from 2 to 10...
+
+Optimal k (Silhouette Score): 4
+Optimal k (Davies-Bouldin Index): 5
+
+✓ K-Means clustering complete! Using k=4
+Silhouette Score: 0.2031
+
+Performing Hierarchical Clustering...
+Silhouette Score: 0.1745
+
+✓ Clustering analysis complete!
+======================================================================
+STATISTICAL TESTING FRAMEWORK
+======================================================================
+
+1. CATEGORICAL vs NUMERICAL ANALYSIS
+----------------------------------------------------------------------
+
+direct_admission vs index:
+  Test: Kruskal-Wallis
+  p-value: 0.630823 ns
+  Interpretation: Not significant
+
+direct_admission vs number_of_siblings:
+  Test: Kruskal-Wallis
+  p-value: 0.002104 **
+  Interpretation: Significant
+
+direct_admission vs final_test:
+  Test: Kruskal-Wallis
+  p-value: 0.000000 ***
+  Interpretation: Significant
+
+
+2. CATEGORICAL vs CATEGORICAL ANALYSIS
+----------------------------------------------------------------------
+
+direct_admission vs CCA:
+  Chi-square statistic: 8.1475
+  p-value: 0.227498
+  Degrees of freedom: 6
+  Interpretation: Independent
+
+  Contingency Table:
+CCA               ARTS  Arts  CLUBS  Clubs  NONE  SPORTS  Sports
+direct_admission                                                
+No                  89  2776     99   2875    83      78    2836
+Yes                 39  1009     44   1037    47      30    1029
+
+
+3. NUMERICAL vs NUMERICAL CORRELATION TESTING
+----------------------------------------------------------------------
+
+index vs number_of_siblings:
+  Pearson r: 0.0018 (p=0.821793)
+  Spearman ρ: 0.0019 (p=0.813435)
+  Interpretation: Not significant (Pearson), Not significant (Spearman)
+
+index vs final_test:
+  Pearson r: 0.0118 (p=0.142805)
+  Spearman ρ: 0.0144 (p=0.074175)
+  Interpretation: Not significant (Pearson), Not significant (Spearman)
+
+index vs n_male:
+  Pearson r: -0.0004 (p=0.961888)
+  Spearman ρ: -0.0026 (p=0.743669)
+  Interpretation: Not significant (Pearson), Not significant (Spearman)
+
+number_of_siblings vs final_test:
+  Pearson r: -0.3638 (p=0.000000)
+  Spearman ρ: -0.3699 (p=0.000000)
+  Interpretation: Significant (Pearson), Significant (Spearman)
+
+number_of_siblings vs n_male:
+  Pearson r: -0.0006 (p=0.935193)
+  Spearman ρ: 0.0040 (p=0.618182)
+  Interpretation: Not significant (Pearson), Not significant (Spearman)
+
+final_test vs n_male:
+  Pearson r: -0.1492 (p=0.000000)
+  Spearman ρ: -0.1524 (p=0.000000)
+  Interpretation: Significant (Pearson), Significant (Spearman)
+
+✓ Statistical testing complete!
