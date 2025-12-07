@@ -1,6 +1,6 @@
 ======================================================================
-EDA Analysis Session Started: 2025-12-07 22:18:44
-Log file: log/eda_analysis_20251207_221844.log
+EDA Analysis Session Started: 2025-12-07 22:28:10
+Log file: log/eda_analysis_20251207_222810.log
 ======================================================================
 
 Advanced Univariate Statistics:
@@ -205,94 +205,6 @@ final_test vs n_male:
   Interpretation: Significant (Pearson), Significant (Spearman)
 
 ✓ Statistical testing complete!
-
-######################################################################
-# ADVANCED EDA FRAMEWORK - COMPLETE ANALYSIS
-######################################################################
-
-======================================================================
-DATA QUALITY REPORT
-======================================================================
-
-Dataset Shape: (15900, 20)
-
-######################################################################
-# ADVANCED EDA FRAMEWORK - COMPLETE ANALYSIS
-######################################################################
-
-======================================================================
-DATA QUALITY REPORT
-======================================================================
-
-Dataset Shape: (15900, 20)
-Total Cells: 318000
-
-Missing Values:
-  CCA: 3829 (24.08%)
-  final_test: 495 (3.11%)
-  attendance_rate: 778 (4.89%)
-  KMeans_Cluster: 1252 (7.87%)
-  Hierarchical_Cluster: 1252 (7.87%)
-
-Duplicate Rows: 0 (0.00%)
-
-Data Types:
-object     10
-float64     8
-int64       2
-Name: count, dtype: int64
-
-======================================================================
-UNIVARIATE ANALYSIS
-======================================================================
-
-Numerical Features Summary:
-                           Mean  Median        Std   Min      Max  Skewness  \
-index                 7949.5000  7949.5  4590.0790   0.0  15899.0    0.0000   
-number_of_siblings       0.8865     1.0     0.7513   0.0      2.0    0.1890   
-final_test              67.1654    68.0    13.9779  32.0    100.0    0.0556   
-n_male                  13.8800    14.0     6.5526   0.0     31.0   -0.1258   
-n_female                 8.9060     8.0     6.6639   0.0     31.0    0.7331   
-age                     15.2135    15.0     1.7589  -5.0     16.0   -5.1608   
-hours_per_week          10.3126     9.0     4.4619   0.0     20.0    0.4387   
-attendance_rate         93.2703    95.0     7.9842  40.0    100.0   -3.6961   
-KMeans_Cluster           0.8005     1.0     0.7188   0.0      3.0    1.1255   
-Hierarchical_Cluster     0.4256     0.0     0.7957   0.0      3.0    2.0598   
-
-                      Kurtosis  Missing %  
-index                  -1.2000     0.0000  
-number_of_siblings     -1.2113     0.0000  
-final_test             -0.7292     3.1132  
-n_male                 -0.3800     0.0000  
-n_female               -0.0916     0.0000  
-age                    28.6489     0.0000  
-hours_per_week         -0.6296     0.0000  
-attendance_rate        15.6759     4.8931  
-KMeans_Cluster          2.1173     7.8742  
-Hierarchical_Cluster    3.6072     7.8742  
-
-======================================================================
-MULTIVARIATE ANALYSIS - CORRELATIONS
-======================================================================
-
-Top 10 Correlations:
-              Var1                 Var2  Correlation
-            n_male             n_female    -0.795446
-   attendance_rate Hierarchical_Cluster    -0.674608
-   attendance_rate       KMeans_Cluster    -0.610896
-            n_male       KMeans_Cluster     0.498317
-          n_female       KMeans_Cluster    -0.465511
-    KMeans_Cluster Hierarchical_Cluster     0.417893
-number_of_siblings           final_test    -0.363767
-        final_test      attendance_rate     0.349375
-          n_female Hierarchical_Cluster     0.346953
-               age Hierarchical_Cluster    -0.321705
-
-######################################################################
-# ANALYSIS COMPLETE
-######################################################################
-
-✓ Advanced EDA framework execution complete!
 
 ######################################################################
 # ADVANCED EDA FRAMEWORK - COMPLETE ANALYSIS
